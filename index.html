@@ -86,37 +86,50 @@
       width: 100%;
       display: block;
     }
-    .pdf-table {
+    
+    /* PDF Document Viewer Styles */
+    .doc-section {
+      margin-top: 20px;
+      padding: 18px;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+    }
+    .doc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .doc-title {
+      font-size: 1.1em;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .doc-desc {
+      color: #8b949e;
+      font-size: 0.9em;
+      margin-bottom: 12px;
+    }
+    .pdf-frame {
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
-    .pdf-table th {
-      background-color: #21262d;
-      color: #ffffff;
-      text-align: left;
-      padding: 14px;
+      height: 500px;
       border: 1px solid #30363d;
-      font-size: 1em;
+      border-radius: 6px;
+      background: #161b22;
     }
-    .pdf-table td {
-      padding: 14px;
-      border: 1px solid #30363d;
-      color: #e6edf3;
-      background-color: #161b22;
-      font-size: 0.95em;
-    }
-    .pdf-table td strong {
-      color: #ffffff;
-    }
+
     .btn-download {
       display: inline-block;
       background: #0284c7;
       color: #ffffff !important;
       font-weight: bold;
-      padding: 10px 18px;
+      padding: 8px 14px;
       border-radius: 6px;
       text-decoration: none !important;
+      font-size: 0.9em;
       transition: background 0.2s;
     }
     .btn-download:hover {
@@ -184,39 +197,38 @@
   </div>
 
   <div class="card">
-    <h2>📑 Project Deliverables & Technical Blueprints</h2>
-    <table class="pdf-table">
-      <thead>
-        <tr>
-          <th>Deliverable</th>
-          <th>Description</th>
-          <th style="text-align: center;">Document</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Deliverable 1: System Proposal</strong></td>
-          <td>System requirements mapping, service selections, and network topology justification.</td>
-          <td style="text-align: center;">
-            <a href="SAM10_System_Proposal_Santiago.pdf" class="btn-download" target="_blank">📄 View PDF</a>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Deliverable 2: AWS Architecture Diagram</strong></td>
-          <td>Visual 3-tier VPC architecture diagram, subnet boundaries, and security group chaining.</td>
-          <td style="text-align: center;">
-            <a href="SAM10_AWS_Architecture_Diagram_Santiago.pdf" class="btn-download" target="_blank">📄 View PDF</a>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Deliverable 3: Infrastructure Document</strong></td>
-          <td>Comprehensive 4-page blueprint covering compute sizing, storage lifecycle, and cost analysis.</td>
-          <td style="text-align: center;">
-            <a href="SAM10_Infrastructure_Design_Document_Santiago.pdf" class="btn-download" target="_blank">📄 View PDF</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <h2>📑 Deliverables & Embedded Document Previews</h2>
+
+    <!-- Deliverable 1 -->
+    <div class="doc-section">
+      <div class="doc-header">
+        <div class="doc-title">Deliverable 1: System Proposal</div>
+        <a href="SAM10_System_Proposal_Santiago.pdf" target="_blank" class="btn-download">↗ Open Full Screen</a>
+      </div>
+      <div class="doc-desc">System requirements mapping, service selections, and network topology justification.</div>
+      <iframe class="pdf-frame" src="SAM10_System_Proposal_Santiago.pdf"></iframe>
+    </div>
+
+    <!-- Deliverable 2 -->
+    <div class="doc-section">
+      <div class="doc-header">
+        <div class="doc-title">Deliverable 2: AWS Architecture Diagram</div>
+        <a href="SAM10_AWS_Architecture_Diagram_Santiago.pdf" target="_blank" class="btn-download">↗ Open Full Screen</a>
+      </div>
+      <div class="doc-desc">Visual 3-tier VPC architecture diagram, subnet boundaries, and security group chaining.</div>
+      <iframe class="pdf-frame" src="SAM10_AWS_Architecture_Diagram_Santiago.pdf"></iframe>
+    </div>
+
+    <!-- Deliverable 3 -->
+    <div class="doc-section">
+      <div class="doc-header">
+        <div class="doc-title">Deliverable 3: Infrastructure Design Document</div>
+        <a href="SAM10_Infrastructure_Design_Document_Santiago.pdf" target="_blank" class="btn-download">↗ Open Full Screen</a>
+      </div>
+      <div class="doc-desc">Comprehensive 4-page blueprint covering compute sizing, storage lifecycle, and cost analysis.</div>
+      <iframe class="pdf-frame" src="SAM10_Infrastructure_Design_Document_Santiago.pdf"></iframe>
+    </div>
+
   </div>
 
   <div class="card">
